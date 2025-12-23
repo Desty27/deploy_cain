@@ -1,0 +1,17 @@
+player_id,name,team,role,acute_load,chronic_load,acute_chronic_ratio,wellness_score,soreness,sleep_hours,injury_history,recovery_index,days_since_last_match,travel_hours,bowling_overs_last_7d,batting_balls_last_7d,sprint_sessions_last_7d
+P001,Player 1,Australia,bowler,280,210,1.33,7.5,4,7.0,1,0.78,3,6,22,0,4
+P002,Player 2,Australia,batter,190,205,0.93,8.9,2,8.1,0,0.88,2,3,0,182,6
+P003,Player 3,Australia,allrounder,260,220,1.18,6.2,6,6.5,2,0.72,4,10,14,96,5
+P004,Player 4,Australia,bowler,310,215,1.44,5.9,7,6.0,3,0.69,1,12,28,0,3
+P005,Player 5,Australia,keeper,210,200,1.05,8.3,3,7.9,0,0.81,2,4,0,160,5
+P006,Player 6,Australia,batter,175,195,0.90,9.1,1,8.3,0,0.92,1,2,0,176,7
+P007,Player 7,Australia,bowler,295,205,1.44,6.8,5,6.2,2,0.74,5,8,30,0,2
+P008,Player 8,Australia,allrounder,240,210,1.14,7.2,4,7.1,1,0.77,3,6,48,120,5
+P009,Australia Reserve,Australia,batter,120,160,0.75,8.8,2,8.5,1,0.90,8,0,0,140,3
+P010,Player 10,England,bowler,300,220,1.36,6.1,6,6.4,2,0.70,2,10,26,0,3
+P011,Player 11,England,allrounder,255,215,1.19,7.4,3,7.3,1,0.79,4,8,36,110,6
+P012,Player 12,England,batter,185,200,0.93,9.3,1,8.4,0,0.93,3,4,0,188,7
+P013,Player 13,England,bowler,320,210,1.52,5.4,8,5.8,3,0.65,1,14,32,0,2
+P014,Player 14,England,batter,205,198,1.04,7.9,3,7.5,1,0.80,2,6,0,166,5
+P015,Player 15,England,allrounder,270,225,1.20,6.7,5,6.8,2,0.76,5,10,20,92,6
+P016,Player 16,England,keeper,195,205,0.95,8.6,2,8.0,0,0.84,3,4,0,150,4

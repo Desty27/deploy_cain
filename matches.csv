@@ -1,0 +1,21 @@
+match_id,season,date,end_date,series_name,venue,team_a,team_b,toss_winner,toss_decision,winner
+1,2025,2025-10-18,2025-10-31,Bangladesh vs West Indies,Sher-e-Bangla National Stadium,Bangladesh,West Indies,Bangladesh,field,Bangladesh
+2,2025,2025-10-18,2025-11-01,New Zealand vs England,Eden Park,New Zealand,England,New Zealand,bat,New Zealand
+3,2025,2025-10-20,2025-11-02,Zimbabwe vs Afghanistan,Harare Sports Club,Zimbabwe,Afghanistan,Zimbabwe,field,Afghanistan
+4,2025,2025-10-06,2025-10-15,MCC Tour of Zimbabwe,Queens Sports Club,Zimbabwe,MCC,MCC,field,Zimbabwe
+5,2025,2025-10-02,2025-10-14,Afghanistan vs Bangladesh,Kabul International Stadium,Afghanistan,Bangladesh,Bangladesh,field,Bangladesh
+6,2025,2025-10-02,2025-10-14,India vs West Indies,Wankhede Stadium,India,West Indies,India,bat,India
+7,2025,2025-10-11,2025-10-11,Namibia vs South Africa,Wanderers Windhoek,Namibia,South Africa,Namibia,bat,Namibia
+8,2025,2025-09-16,2025-10-05,India A vs Australia A,M. Chinnaswamy Stadium,India A,Australia A,Australia A,field,Australia A
+9,2025,2025-09-24,2025-10-06,UAE Women vs ZIM Women,Dubai International Stadium,UAE Women,Zimbabwe Women,Zimbabwe Women,field,Zimbabwe Women
+10,2025,2025-10-01,2025-10-04,New Zealand vs Australia,Sky Stadium,New Zealand,Australia,Australia,bat,New Zealand
+11,2025,2025-09-15,2025-10-04,Zimbabwe vs Namibia,Bulawayo Athletic Club,Zimbabwe,Namibia,Namibia,field,Zimbabwe
+12,2025,2025-09-25,2025-09-30,Nepal vs West Indies,Tribhuvan University Ground,Nepal,West Indies,West Indies,field,West Indies
+13,2025,2025-09-09,2025-09-28,Men's T20 Asia Cup 2025,R. Premadasa Stadium,Asia Cup 2025,ACC All-Stars,Asia Cup 2025,bat,ACC All-Stars
+14,2025,2025-09-25,2025-09-28,ICC Women's World Cup Warm-up,Seddon Park,Women's World Cup Warm-up,Global XI,Women's World Cup Warm-up,bat,Women's World Cup Warm-up
+15,2025,2025-04-27,2025-05-11,Sri Lanka Women's ODI Tri-Series,P Sara Oval,Sri Lanka Women's Tri-Series,Tri-Series Invitational,Tri-Series Invitational,bat,Sri Lanka Women's Tri-Series
+16,2025,2025-04-09,2025-04-19,Women's World Cup Qualifier,Willowmoore Park,Women's WC Qualifier,Qualifier XI,Qualifier XI,field,Qualifier XI
+17,2025,2025-02-19,2025-03-09,Champions Trophy 2025,Narendra Modi Stadium,Champions Trophy,Global Contenders,Champions Trophy,bat,Global Contenders
+18,2025,2025-02-08,2025-02-14,Pakistan Tri Series 2025,Gaddafi Stadium,Pakistan Tri-Series,Tri-Series Field,Tri-Series Field,bat,Pakistan Tri-Series
+19,2025,2025-01-18,2025-02-02,ICC Women's U19 World Cup,Benoni Oval,ICC Women's U19 WC,U19 World XI,U19 World XI,bat,U19 World XI
+20,2024,2024-12-15,2024-12-22,Under-19 Women's Asia Cup,Rangiri Dambulla International Stadium,U19 Women's Asia Cup,ACC U19 XI,U19 Women's Asia Cup,field,U19 Women's Asia Cup

@@ -1,0 +1,513 @@
+player_id,full_name,team,batting_style,bowling_style
+1,Shami ACC01,ACC All-Stars,Right-handed,Right-arm fast
+2,Taylor ACC02,ACC All-Stars,Left-handed,Right-arm medium
+3,Ashwin ACC03,ACC All-Stars,Right-handed,Off spin
+4,Bairstow ACC04,ACC All-Stars,Right-handed,Leg spin
+5,Finch ACC05,ACC All-Stars,Right-handed,Right-arm fast
+6,Root ACC06,ACC All-Stars,Right-handed,Right-arm medium
+7,Agar ACC07,ACC All-Stars,Right-handed,Leg spin
+8,Bumrah ACC08,ACC All-Stars,Left-handed,Right-arm medium
+9,Carey ACC09,ACC All-Stars,Left-handed,
+10,Smith ACC10,ACC All-Stars,Right-handed,Off spin
+11,Finch ACC11,ACC All-Stars,Left-handed,Left-arm fast
+12,Buttler ACC12,ACC All-Stars,Right-handed,
+13,Maharaj ACC13,ACC All-Stars,Right-handed,Right-arm fast
+14,Holder ACC14,ACC All-Stars,Right-handed,Left-arm fast
+15,Ngidi ACC15,ACC All-Stars,Left-handed,
+16,Labuschagne ACC16,ACC All-Stars,Left-handed,Leg spin
+17,Stokes ACC01,ACC U19 XI,Left-handed,Right-arm fast
+18,Malan ACC02,ACC U19 XI,Left-handed,
+19,Shami ACC03,ACC U19 XI,Left-handed,Leg spin
+20,Bumrah ACC04,ACC U19 XI,Right-handed,Right-arm fast
+21,Chahal ACC05,ACC U19 XI,Right-handed,
+22,Conway ACC06,ACC U19 XI,Right-handed,
+23,Ashwin ACC07,ACC U19 XI,Right-handed,Left-arm orthodox
+24,Southee ACC08,ACC U19 XI,Left-handed,Off spin
+25,Pollard ACC09,ACC U19 XI,Right-handed,Left-arm fast
+26,Ngidi ACC10,ACC U19 XI,Right-handed,Off spin
+27,Southee ACC11,ACC U19 XI,Right-handed,Leg spin
+28,Shami ACC12,ACC U19 XI,Right-handed,Leg spin
+29,Masakadza ACC13,ACC U19 XI,Right-handed,Right-arm medium
+30,Paine ACC14,ACC U19 XI,Left-handed,Left-arm fast
+31,Shami ACC15,ACC U19 XI,Right-handed,Off spin
+32,De Kock ACC16,ACC U19 XI,Right-handed,Right-arm medium
+33,Labuschagne AFG01,Afghanistan,Left-handed,Left-arm orthodox
+34,Southee AFG02,Afghanistan,Right-handed,Right-arm medium
+35,Curran AFG03,Afghanistan,Left-handed,Right-arm medium
+36,Jadeja AFG04,Afghanistan,Left-handed,Left-arm orthodox
+37,Jadeja AFG05,Afghanistan,Left-handed,Right-arm medium
+38,Boult AFG06,Afghanistan,Right-handed,Right-arm medium
+39,Taylor AFG07,Afghanistan,Left-handed,Off spin
+40,Iyer AFG08,Afghanistan,Left-handed,Leg spin
+41,Russell AFG09,Afghanistan,Left-handed,Right-arm medium
+42,Archer AFG10,Afghanistan,Left-handed,Right-arm fast
+43,Williams AFG11,Afghanistan,Right-handed,
+44,Stokes AFG12,Afghanistan,Right-handed,Off spin
+45,Kohli AFG13,Afghanistan,Left-handed,Leg spin
+46,Starc AFG14,Afghanistan,Left-handed,Left-arm orthodox
+47,Kishan AFG15,Afghanistan,Left-handed,Leg spin
+48,Boult AFG16,Afghanistan,Right-handed,Off spin
+49,Masakadza ASI01,Asia Cup 2025,Right-handed,Off spin
+50,Woakes ASI02,Asia Cup 2025,Left-handed,
+51,Jadeja ASI03,Asia Cup 2025,Left-handed,Right-arm fast
+52,Conway ASI04,Asia Cup 2025,Left-handed,Right-arm medium
+53,Paine ASI05,Asia Cup 2025,Right-handed,Off spin
+54,Masakadza ASI06,Asia Cup 2025,Left-handed,Leg spin
+55,Williams ASI07,Asia Cup 2025,Right-handed,Leg spin
+56,Bairstow ASI08,Asia Cup 2025,Left-handed,
+57,Shami ASI09,Asia Cup 2025,Right-handed,Right-arm medium
+58,Pollard ASI10,Asia Cup 2025,Right-handed,Leg spin
+59,Ervine ASI11,Asia Cup 2025,Right-handed,Leg spin
+60,De Kock ASI12,Asia Cup 2025,Left-handed,Right-arm fast
+61,Stokes ASI13,Asia Cup 2025,Left-handed,
+62,Rabada ASI14,Asia Cup 2025,Right-handed,Right-arm fast
+63,Williamson ASI15,Asia Cup 2025,Right-handed,Right-arm fast
+64,Masakadza ASI16,Asia Cup 2025,Left-handed,
+65,Starc AUS01,Australia,Right-handed,Right-arm medium
+66,Chahal AUS02,Australia,Left-handed,Leg spin
+67,Kohli AUS03,Australia,Left-handed,Leg spin
+68,Kishan AUS04,Australia,Left-handed,Right-arm medium
+69,Woakes AUS05,Australia,Right-handed,Off spin
+70,Rabada AUS06,Australia,Left-handed,Off spin
+71,Jadeja AUS07,Australia,Left-handed,Left-arm orthodox
+72,Ali AUS08,Australia,Left-handed,Right-arm fast
+73,Williamson AUS09,Australia,Right-handed,Right-arm fast
+74,Maharaj AUS10,Australia,Right-handed,Leg spin
+75,Malan AUS11,Australia,Right-handed,Leg spin
+76,Ashwin AUS12,Australia,Right-handed,Right-arm fast
+77,Nabi AUS13,Australia,Right-handed,Right-arm medium
+78,Starc AUS14,Australia,Right-handed,
+79,Maharaj AUS15,Australia,Right-handed,Leg spin
+80,Williamson AUS16,Australia,Left-handed,Off spin
+81,Green AUS01,Australia A,Right-handed,Leg spin
+82,Archer AUS02,Australia A,Left-handed,Right-arm medium
+83,Marsh AUS03,Australia A,Left-handed,Right-arm medium
+84,Bairstow AUS04,Australia A,Right-handed,Off spin
+85,Finch AUS05,Australia A,Left-handed,Left-arm orthodox
+86,Gayle AUS06,Australia A,Left-handed,
+87,Masakadza AUS07,Australia A,Right-handed,Off spin
+88,Jadeja AUS08,Australia A,Right-handed,Right-arm fast
+89,Russell AUS09,Australia A,Left-handed,
+90,Bairstow AUS10,Australia A,Right-handed,Right-arm medium
+91,Bumrah AUS11,Australia A,Left-handed,Right-arm medium
+92,Finch AUS12,Australia A,Right-handed,Left-arm fast
+93,Paine AUS13,Australia A,Right-handed,
+94,Starc AUS14,Australia A,Left-handed,
+95,Malan AUS15,Australia A,Right-handed,Right-arm fast
+96,Jadeja AUS16,Australia A,Right-handed,Right-arm fast
+97,Williams BAN01,Bangladesh,Right-handed,Right-arm medium
+98,Gayle BAN02,Bangladesh,Left-handed,Left-arm orthodox
+99,Pant BAN03,Bangladesh,Left-handed,Right-arm fast
+100,Kohli BAN04,Bangladesh,Left-handed,Right-arm fast
+101,Holder BAN05,Bangladesh,Left-handed,
+102,Paine BAN06,Bangladesh,Left-handed,Left-arm orthodox
+103,Rashid BAN07,Bangladesh,Left-handed,Right-arm medium
+104,Bumrah BAN08,Bangladesh,Left-handed,Right-arm medium
+105,Cummins BAN09,Bangladesh,Right-handed,Off spin
+106,De Kock BAN10,Bangladesh,Right-handed,Right-arm fast
+107,Iyer BAN11,Bangladesh,Left-handed,Leg spin
+108,Ali BAN12,Bangladesh,Right-handed,Right-arm fast
+109,Agar BAN13,Bangladesh,Right-handed,
+110,Sharma BAN14,Bangladesh,Right-handed,Leg spin
+111,Starc BAN15,Bangladesh,Right-handed,Left-arm orthodox
+112,Stokes BAN16,Bangladesh,Right-handed,Leg spin
+113,Kishan CHA01,Champions Trophy,Right-handed,Leg spin
+114,Root CHA02,Champions Trophy,Left-handed,Off spin
+115,Iyer CHA03,Champions Trophy,Left-handed,Left-arm fast
+116,Pant CHA04,Champions Trophy,Left-handed,Right-arm medium
+117,Boult CHA05,Champions Trophy,Left-handed,Right-arm medium
+118,Chahal CHA06,Champions Trophy,Left-handed,Left-arm orthodox
+119,De Kock CHA07,Champions Trophy,Right-handed,Right-arm fast
+120,Paine CHA08,Champions Trophy,Right-handed,Right-arm fast
+121,Woakes CHA09,Champions Trophy,Right-handed,Leg spin
+122,Boult CHA10,Champions Trophy,Right-handed,Left-arm fast
+123,Starc CHA11,Champions Trophy,Right-handed,Left-arm fast
+124,Conway CHA12,Champions Trophy,Right-handed,Left-arm orthodox
+125,Woakes CHA13,Champions Trophy,Left-handed,Leg spin
+126,Jadeja CHA14,Champions Trophy,Right-handed,Off spin
+127,Malan CHA15,Champions Trophy,Left-handed,Off spin
+128,Bairstow CHA16,Champions Trophy,Right-handed,Left-arm fast
+129,Stokes ENG01,England,Right-handed,Off spin
+130,Malan ENG02,England,Right-handed,Left-arm fast
+131,Conway ENG03,England,Right-handed,Off spin
+132,Maharaj ENG04,England,Right-handed,Off spin
+133,Shami ENG05,England,Left-handed,Leg spin
+134,Green ENG06,England,Left-handed,
+135,Cummins ENG07,England,Right-handed,Off spin
+136,Finch ENG08,England,Left-handed,Right-arm fast
+137,Smith ENG09,England,Left-handed,
+138,Archer ENG10,England,Left-handed,Right-arm medium
+139,Taylor ENG11,England,Left-handed,Leg spin
+140,Nabi ENG12,England,Left-handed,Leg spin
+141,Smith ENG13,England,Right-handed,Right-arm fast
+142,Rashid ENG14,England,Right-handed,Leg spin
+143,Labuschagne ENG15,England,Left-handed,Leg spin
+144,Malan ENG16,England,Right-handed,Left-arm orthodox
+145,Archer GLO01,Global Contenders,Right-handed,Left-arm fast
+146,Pollard GLO02,Global Contenders,Right-handed,Left-arm fast
+147,Pant GLO03,Global Contenders,Right-handed,Off spin
+148,Bairstow GLO04,Global Contenders,Left-handed,
+149,Malan GLO05,Global Contenders,Left-handed,Leg spin
+150,Taylor GLO06,Global Contenders,Right-handed,Right-arm medium
+151,Kohli GLO07,Global Contenders,Right-handed,Left-arm orthodox
+152,Warner GLO08,Global Contenders,Right-handed,Off spin
+153,Maharaj GLO09,Global Contenders,Left-handed,
+154,Chahal GLO10,Global Contenders,Right-handed,Left-arm fast
+155,Kohli GLO11,Global Contenders,Right-handed,Left-arm orthodox
+156,Labuschagne GLO12,Global Contenders,Left-handed,Right-arm medium
+157,Bumrah GLO13,Global Contenders,Left-handed,Left-arm fast
+158,Rabada GLO14,Global Contenders,Right-handed,Right-arm medium
+159,Warner GLO15,Global Contenders,Right-handed,Left-arm orthodox
+160,Maharaj GLO16,Global Contenders,Left-handed,
+161,Starc GLO01,Global XI,Left-handed,Left-arm fast
+162,Jadeja GLO02,Global XI,Left-handed,Off spin
+163,Woakes GLO03,Global XI,Left-handed,Right-arm fast
+164,Stokes GLO04,Global XI,Left-handed,Right-arm medium
+165,Iyer GLO05,Global XI,Left-handed,Right-arm fast
+166,Bairstow GLO06,Global XI,Left-handed,Left-arm fast
+167,Masakadza GLO07,Global XI,Left-handed,Left-arm orthodox
+168,Kishan GLO08,Global XI,Right-handed,Left-arm orthodox
+169,Curran GLO09,Global XI,Right-handed,Left-arm fast
+170,Labuschagne GLO10,Global XI,Left-handed,Right-arm fast
+171,Ali GLO11,Global XI,Right-handed,Left-arm fast
+172,Finch GLO12,Global XI,Right-handed,Off spin
+173,Maharaj GLO13,Global XI,Left-handed,Off spin
+174,Stokes GLO14,Global XI,Left-handed,Leg spin
+175,Rabada GLO15,Global XI,Left-handed,Left-arm fast
+176,Russell GLO16,Global XI,Left-handed,Leg spin
+177,Archer ICC01,ICC Women's U19 WC,Right-handed,Left-arm orthodox
+178,Chahal ICC02,ICC Women's U19 WC,Left-handed,Off spin
+179,Taylor ICC03,ICC Women's U19 WC,Right-handed,Leg spin
+180,Curran ICC04,ICC Women's U19 WC,Left-handed,Left-arm orthodox
+181,Malan ICC05,ICC Women's U19 WC,Right-handed,Left-arm fast
+182,Conway ICC06,ICC Women's U19 WC,Right-handed,Left-arm orthodox
+183,Iyer ICC07,ICC Women's U19 WC,Left-handed,Left-arm orthodox
+184,Carey ICC08,ICC Women's U19 WC,Left-handed,Off spin
+185,Pant ICC09,ICC Women's U19 WC,Left-handed,
+186,Taylor ICC10,ICC Women's U19 WC,Right-handed,Off spin
+187,Root ICC11,ICC Women's U19 WC,Left-handed,Leg spin
+188,Chahal ICC12,ICC Women's U19 WC,Left-handed,Right-arm fast
+189,Williams ICC13,ICC Women's U19 WC,Right-handed,Off spin
+190,Rabada ICC14,ICC Women's U19 WC,Right-handed,
+191,Bumrah ICC15,ICC Women's U19 WC,Right-handed,Right-arm fast
+192,Labuschagne ICC16,ICC Women's U19 WC,Right-handed,Left-arm orthodox
+193,Siraj IND01,India,Right-handed,Left-arm orthodox
+194,Gayle IND02,India,Right-handed,Off spin
+195,Rashid IND03,India,Left-handed,Left-arm orthodox
+196,Russell IND04,India,Right-handed,Right-arm medium
+197,Jadeja IND05,India,Right-handed,
+198,Ervine IND06,India,Right-handed,
+199,Finch IND07,India,Right-handed,Right-arm medium
+200,Rashid IND08,India,Left-handed,Right-arm fast
+201,Malan IND09,India,Right-handed,
+202,Stokes IND10,India,Left-handed,Right-arm medium
+203,Paine IND11,India,Left-handed,
+204,Carey IND12,India,Left-handed,
+205,Malan IND13,India,Left-handed,Right-arm medium
+206,Taylor IND14,India,Left-handed,Left-arm orthodox
+207,Boult IND15,India,Right-handed,
+208,Shami IND16,India,Left-handed,
+209,Ervine IND01,India A,Left-handed,Off spin
+210,Williamson IND02,India A,Left-handed,Left-arm orthodox
+211,Starc IND03,India A,Left-handed,Right-arm medium
+212,Southee IND04,India A,Left-handed,Left-arm fast
+213,Woakes IND05,India A,Right-handed,Right-arm medium
+214,Buttler IND06,India A,Right-handed,Left-arm orthodox
+215,Rashid IND07,India A,Right-handed,Off spin
+216,Pant IND08,India A,Right-handed,Left-arm orthodox
+217,Gayle IND09,India A,Left-handed,Leg spin
+218,Paine IND10,India A,Left-handed,Right-arm fast
+219,Pant IND11,India A,Left-handed,Left-arm orthodox
+220,Ervine IND12,India A,Right-handed,
+221,Williams IND13,India A,Left-handed,Left-arm orthodox
+222,Smith IND14,India A,Left-handed,Left-arm fast
+223,Williams IND15,India A,Left-handed,
+224,Gayle IND16,India A,Right-handed,Left-arm orthodox
+225,Ashwin MCC01,MCC,Left-handed,Left-arm orthodox
+226,Green MCC02,MCC,Right-handed,Left-arm orthodox
+227,Maharaj MCC03,MCC,Left-handed,Off spin
+228,Kohli MCC04,MCC,Left-handed,Right-arm medium
+229,Siraj MCC05,MCC,Right-handed,Left-arm orthodox
+230,Iyer MCC06,MCC,Right-handed,Right-arm fast
+231,Jadeja MCC07,MCC,Left-handed,Right-arm medium
+232,Paine MCC08,MCC,Right-handed,Right-arm fast
+233,Boult MCC09,MCC,Left-handed,Left-arm fast
+234,Pant MCC10,MCC,Left-handed,Left-arm fast
+235,Maharaj MCC11,MCC,Left-handed,Left-arm fast
+236,Williams MCC12,MCC,Left-handed,Left-arm fast
+237,Root MCC13,MCC,Left-handed,Right-arm fast
+238,Taylor MCC14,MCC,Right-handed,Left-arm fast
+239,Ashwin MCC15,MCC,Right-handed,
+240,Jadeja MCC16,MCC,Right-handed,
+241,Warner NAM01,Namibia,Right-handed,Right-arm medium
+242,Warner NAM02,Namibia,Right-handed,Right-arm medium
+243,Archer NAM03,Namibia,Left-handed,Off spin
+244,Stokes NAM04,Namibia,Right-handed,Left-arm orthodox
+245,Rashid NAM05,Namibia,Left-handed,
+246,Pollard NAM06,Namibia,Right-handed,Leg spin
+247,Kishan NAM07,Namibia,Right-handed,
+248,Kohli NAM08,Namibia,Left-handed,Right-arm fast
+249,Iyer NAM09,Namibia,Right-handed,Left-arm fast
+250,Curran NAM10,Namibia,Left-handed,Left-arm orthodox
+251,Nabi NAM11,Namibia,Right-handed,Right-arm fast
+252,Iyer NAM12,Namibia,Right-handed,Right-arm fast
+253,Rashid NAM13,Namibia,Left-handed,
+254,Kuldeep NAM14,Namibia,Right-handed,
+255,Curran NAM15,Namibia,Right-handed,Left-arm fast
+256,Woakes NAM16,Namibia,Left-handed,Off spin
+257,Pollard NEP01,Nepal,Right-handed,Leg spin
+258,Jadeja NEP02,Nepal,Left-handed,Right-arm fast
+259,Gayle NEP03,Nepal,Left-handed,Right-arm fast
+260,Finch NEP04,Nepal,Left-handed,Off spin
+261,Paine NEP05,Nepal,Right-handed,Left-arm orthodox
+262,Sharma NEP06,Nepal,Left-handed,Leg spin
+263,Woakes NEP07,Nepal,Left-handed,Left-arm orthodox
+264,Finch NEP08,Nepal,Left-handed,Left-arm fast
+265,Williamson NEP09,Nepal,Right-handed,Left-arm fast
+266,Carey NEP10,Nepal,Right-handed,
+267,Paine NEP11,Nepal,Left-handed,Left-arm fast
+268,Warner NEP12,Nepal,Left-handed,
+269,De Kock NEP13,Nepal,Right-handed,Left-arm orthodox
+270,Pant NEP14,Nepal,Left-handed,
+271,Boult NEP15,Nepal,Left-handed,Left-arm fast
+272,Kishan NEP16,Nepal,Left-handed,Leg spin
+273,Smith NEW01,New Zealand,Right-handed,Right-arm fast
+274,Williamson NEW02,New Zealand,Left-handed,Left-arm orthodox
+275,Malan NEW03,New Zealand,Right-handed,Off spin
+276,Marsh NEW04,New Zealand,Left-handed,Left-arm orthodox
+277,Warner NEW05,New Zealand,Right-handed,Left-arm fast
+278,Ashwin NEW06,New Zealand,Left-handed,Off spin
+279,Williamson NEW07,New Zealand,Left-handed,Off spin
+280,Iyer NEW08,New Zealand,Left-handed,Left-arm orthodox
+281,Malan NEW09,New Zealand,Left-handed,Left-arm orthodox
+282,Taylor NEW10,New Zealand,Left-handed,Left-arm fast
+283,Rashid NEW11,New Zealand,Left-handed,Left-arm fast
+284,Rabada NEW12,New Zealand,Left-handed,Right-arm medium
+285,Stokes NEW13,New Zealand,Right-handed,Left-arm fast
+286,Stokes NEW14,New Zealand,Right-handed,Right-arm medium
+287,Pant NEW15,New Zealand,Left-handed,Left-arm fast
+288,Masakadza NEW16,New Zealand,Left-handed,Right-arm fast
+289,Bumrah PAK01,Pakistan Tri-Series,Left-handed,Right-arm medium
+290,Pollard PAK02,Pakistan Tri-Series,Right-handed,Left-arm fast
+291,Smith PAK03,Pakistan Tri-Series,Right-handed,Left-arm fast
+292,Labuschagne PAK04,Pakistan Tri-Series,Right-handed,Leg spin
+293,Conway PAK05,Pakistan Tri-Series,Right-handed,Off spin
+294,Williams PAK06,Pakistan Tri-Series,Left-handed,Right-arm fast
+295,Smith PAK07,Pakistan Tri-Series,Left-handed,Left-arm orthodox
+296,Marsh PAK08,Pakistan Tri-Series,Left-handed,Left-arm fast
+297,Sharma PAK09,Pakistan Tri-Series,Right-handed,Left-arm fast
+298,Marsh PAK10,Pakistan Tri-Series,Right-handed,
+299,Starc PAK11,Pakistan Tri-Series,Left-handed,Left-arm orthodox
+300,Starc PAK12,Pakistan Tri-Series,Right-handed,Right-arm medium
+301,Buttler PAK13,Pakistan Tri-Series,Left-handed,Right-arm fast
+302,Williamson PAK14,Pakistan Tri-Series,Right-handed,Leg spin
+303,Williams PAK15,Pakistan Tri-Series,Left-handed,Leg spin
+304,Kishan PAK16,Pakistan Tri-Series,Right-handed,
+305,Ali QUA01,Qualifier XI,Left-handed,Left-arm orthodox
+306,Carey QUA02,Qualifier XI,Left-handed,
+307,Iyer QUA03,Qualifier XI,Left-handed,Left-arm fast
+308,Curran QUA04,Qualifier XI,Right-handed,Leg spin
+309,Taylor QUA05,Qualifier XI,Right-handed,
+310,Pant QUA06,Qualifier XI,Right-handed,Left-arm fast
+311,Chahal QUA07,Qualifier XI,Right-handed,Right-arm medium
+312,Williamson QUA08,Qualifier XI,Right-handed,Leg spin
+313,Starc QUA09,Qualifier XI,Right-handed,Right-arm fast
+314,Gayle QUA10,Qualifier XI,Left-handed,Off spin
+315,Kishan QUA11,Qualifier XI,Left-handed,Left-arm fast
+316,Labuschagne QUA12,Qualifier XI,Right-handed,Left-arm fast
+317,Nabi QUA13,Qualifier XI,Left-handed,Off spin
+318,Paine QUA14,Qualifier XI,Right-handed,Off spin
+319,Ashwin QUA15,Qualifier XI,Left-handed,
+320,Shami QUA16,Qualifier XI,Right-handed,Left-arm orthodox
+321,Stokes SOU01,South Africa,Right-handed,Off spin
+322,Buttler SOU02,South Africa,Left-handed,
+323,Buttler SOU03,South Africa,Right-handed,Right-arm fast
+324,Kohli SOU04,South Africa,Left-handed,Leg spin
+325,Taylor SOU05,South Africa,Left-handed,Left-arm orthodox
+326,Stokes SOU06,South Africa,Left-handed,Off spin
+327,Rabada SOU07,South Africa,Left-handed,Left-arm fast
+328,Agar SOU08,South Africa,Left-handed,Left-arm orthodox
+329,Root SOU09,South Africa,Right-handed,Left-arm orthodox
+330,Taylor SOU10,South Africa,Left-handed,Leg spin
+331,Boult SOU11,South Africa,Right-handed,Right-arm fast
+332,Ashwin SOU12,South Africa,Right-handed,
+333,Kuldeep SOU13,South Africa,Left-handed,Leg spin
+334,Labuschagne SOU14,South Africa,Right-handed,Left-arm orthodox
+335,Ali SOU15,South Africa,Left-handed,Left-arm fast
+336,Sharma SOU16,South Africa,Left-handed,Off spin
+337,Green SRI01,Sri Lanka Women's Tri-Series,Right-handed,Left-arm orthodox
+338,Ngidi SRI02,Sri Lanka Women's Tri-Series,Left-handed,Left-arm fast
+339,De Kock SRI03,Sri Lanka Women's Tri-Series,Right-handed,
+340,Kohli SRI04,Sri Lanka Women's Tri-Series,Left-handed,Left-arm orthodox
+341,Rashid SRI05,Sri Lanka Women's Tri-Series,Left-handed,Left-arm fast
+342,Chahal SRI06,Sri Lanka Women's Tri-Series,Left-handed,
+343,Williams SRI07,Sri Lanka Women's Tri-Series,Right-handed,Left-arm orthodox
+344,Root SRI08,Sri Lanka Women's Tri-Series,Left-handed,Left-arm fast
+345,De Kock SRI09,Sri Lanka Women's Tri-Series,Right-handed,
+346,Russell SRI10,Sri Lanka Women's Tri-Series,Right-handed,Off spin
+347,Woakes SRI11,Sri Lanka Women's Tri-Series,Left-handed,Left-arm orthodox
+348,Cummins SRI12,Sri Lanka Women's Tri-Series,Right-handed,Leg spin
+349,Pollard SRI13,Sri Lanka Women's Tri-Series,Left-handed,Off spin
+350,Carey SRI14,Sri Lanka Women's Tri-Series,Right-handed,Right-arm medium
+351,Southee SRI15,Sri Lanka Women's Tri-Series,Right-handed,Left-arm fast
+352,Carey SRI16,Sri Lanka Women's Tri-Series,Left-handed,Right-arm fast
+353,Warner TRI01,Tri-Series Field,Right-handed,Off spin
+354,Kohli TRI02,Tri-Series Field,Left-handed,Leg spin
+355,Smith TRI03,Tri-Series Field,Left-handed,Right-arm fast
+356,Ashwin TRI04,Tri-Series Field,Right-handed,Left-arm orthodox
+357,Stokes TRI05,Tri-Series Field,Right-handed,Left-arm orthodox
+358,Nabi TRI06,Tri-Series Field,Left-handed,Leg spin
+359,Nabi TRI07,Tri-Series Field,Left-handed,Left-arm orthodox
+360,Marsh TRI08,Tri-Series Field,Left-handed,Right-arm medium
+361,Paine TRI09,Tri-Series Field,Right-handed,Left-arm orthodox
+362,Bumrah TRI10,Tri-Series Field,Right-handed,
+363,Starc TRI11,Tri-Series Field,Left-handed,
+364,Gayle TRI12,Tri-Series Field,Left-handed,
+365,Agar TRI13,Tri-Series Field,Left-handed,
+366,Smith TRI14,Tri-Series Field,Left-handed,Off spin
+367,Rabada TRI15,Tri-Series Field,Left-handed,
+368,Buttler TRI16,Tri-Series Field,Left-handed,Leg spin
+369,Marsh TRI01,Tri-Series Invitational,Left-handed,Left-arm fast
+370,Malan TRI02,Tri-Series Invitational,Left-handed,Left-arm orthodox
+371,De Kock TRI03,Tri-Series Invitational,Right-handed,Off spin
+372,Williamson TRI04,Tri-Series Invitational,Left-handed,Right-arm medium
+373,Ervine TRI05,Tri-Series Invitational,Left-handed,Right-arm fast
+374,De Kock TRI06,Tri-Series Invitational,Left-handed,Off spin
+375,Holder TRI07,Tri-Series Invitational,Left-handed,Off spin
+376,Jadeja TRI08,Tri-Series Invitational,Right-handed,Left-arm orthodox
+377,Labuschagne TRI09,Tri-Series Invitational,Right-handed,Leg spin
+378,Iyer TRI10,Tri-Series Invitational,Left-handed,
+379,Bairstow TRI11,Tri-Series Invitational,Left-handed,Right-arm fast
+380,Ali TRI12,Tri-Series Invitational,Left-handed,Right-arm fast
+381,Masakadza TRI13,Tri-Series Invitational,Right-handed,Left-arm orthodox
+382,Jadeja TRI14,Tri-Series Invitational,Right-handed,Right-arm fast
+383,Marsh TRI15,Tri-Series Invitational,Left-handed,Left-arm fast
+384,Siraj TRI16,Tri-Series Invitational,Left-handed,Off spin
+385,Root U1901,U19 Women's Asia Cup,Left-handed,
+386,Kuldeep U1902,U19 Women's Asia Cup,Left-handed,Left-arm fast
+387,Shami U1903,U19 Women's Asia Cup,Left-handed,
+388,Woakes U1904,U19 Women's Asia Cup,Right-handed,Leg spin
+389,Starc U1905,U19 Women's Asia Cup,Right-handed,Off spin
+390,Kuldeep U1906,U19 Women's Asia Cup,Left-handed,Right-arm medium
+391,Taylor U1907,U19 Women's Asia Cup,Right-handed,Left-arm orthodox
+392,Bairstow U1908,U19 Women's Asia Cup,Right-handed,Left-arm orthodox
+393,Kohli U1909,U19 Women's Asia Cup,Left-handed,Right-arm fast
+394,Labuschagne U1910,U19 Women's Asia Cup,Left-handed,
+395,Cummins U1911,U19 Women's Asia Cup,Left-handed,Left-arm fast
+396,Pollard U1912,U19 Women's Asia Cup,Left-handed,Right-arm medium
+397,Williamson U1913,U19 Women's Asia Cup,Left-handed,Leg spin
+398,Kuldeep U1914,U19 Women's Asia Cup,Right-handed,Right-arm medium
+399,Sharma U1915,U19 Women's Asia Cup,Right-handed,Leg spin
+400,Holder U1916,U19 Women's Asia Cup,Right-handed,Left-arm orthodox
+401,Iyer U1901,U19 World XI,Right-handed,Right-arm medium
+402,Paine U1902,U19 World XI,Left-handed,Left-arm orthodox
+403,Boult U1903,U19 World XI,Right-handed,
+404,Paine U1904,U19 World XI,Left-handed,Off spin
+405,Woakes U1905,U19 World XI,Right-handed,Right-arm fast
+406,Carey U1906,U19 World XI,Left-handed,Leg spin
+407,Rabada U1907,U19 World XI,Left-handed,Off spin
+408,Boult U1908,U19 World XI,Left-handed,
+409,Rabada U1909,U19 World XI,Right-handed,Left-arm orthodox
+410,Marsh U1910,U19 World XI,Right-handed,Right-arm medium
+411,Holder U1911,U19 World XI,Left-handed,Leg spin
+412,Conway U1912,U19 World XI,Left-handed,Right-arm fast
+413,Chahal U1913,U19 World XI,Left-handed,Left-arm fast
+414,Smith U1914,U19 World XI,Right-handed,Leg spin
+415,Taylor U1915,U19 World XI,Left-handed,
+416,Conway U1916,U19 World XI,Right-handed,Leg spin
+417,Ngidi UAE01,UAE Women,Right-handed,Off spin
+418,Bumrah UAE02,UAE Women,Left-handed,Off spin
+419,Williams UAE03,UAE Women,Right-handed,Off spin
+420,Bairstow UAE04,UAE Women,Right-handed,Left-arm fast
+421,Carey UAE05,UAE Women,Right-handed,Leg spin
+422,Pollard UAE06,UAE Women,Right-handed,Right-arm fast
+423,Conway UAE07,UAE Women,Left-handed,Off spin
+424,Gayle UAE08,UAE Women,Right-handed,Right-arm medium
+425,Archer UAE09,UAE Women,Left-handed,Leg spin
+426,Agar UAE10,UAE Women,Left-handed,
+427,Kohli UAE11,UAE Women,Left-handed,
+428,Marsh UAE12,UAE Women,Left-handed,Off spin
+429,Maharaj UAE13,UAE Women,Right-handed,Left-arm orthodox
+430,Starc UAE14,UAE Women,Right-handed,
+431,Ashwin UAE15,UAE Women,Left-handed,
+432,Malan UAE16,UAE Women,Left-handed,Right-arm fast
+433,Russell WES01,West Indies,Right-handed,Left-arm fast
+434,Woakes WES02,West Indies,Right-handed,Left-arm orthodox
+435,Pollard WES03,West Indies,Left-handed,Leg spin
+436,Holder WES04,West Indies,Left-handed,Right-arm fast
+437,Kuldeep WES05,West Indies,Right-handed,Left-arm orthodox
+438,Warner WES06,West Indies,Left-handed,Leg spin
+439,Ashwin WES07,West Indies,Right-handed,Off spin
+440,Paine WES08,West Indies,Left-handed,Off spin
+441,Gayle WES09,West Indies,Right-handed,Right-arm medium
+442,Labuschagne WES10,West Indies,Right-handed,Left-arm fast
+443,Green WES11,West Indies,Right-handed,Right-arm fast
+444,Williamson WES12,West Indies,Right-handed,Left-arm orthodox
+445,Paine WES13,West Indies,Left-handed,Off spin
+446,Taylor WES14,West Indies,Left-handed,Leg spin
+447,Taylor WES15,West Indies,Right-handed,Left-arm orthodox
+448,Jadeja WES16,West Indies,Right-handed,
+449,Green WOM01,Women's WC Qualifier,Left-handed,Left-arm fast
+450,Labuschagne WOM02,Women's WC Qualifier,Left-handed,Right-arm medium
+451,Carey WOM03,Women's WC Qualifier,Left-handed,Right-arm medium
+452,Pollard WOM04,Women's WC Qualifier,Right-handed,Off spin
+453,Pollard WOM05,Women's WC Qualifier,Left-handed,Right-arm fast
+454,Russell WOM06,Women's WC Qualifier,Left-handed,Right-arm medium
+455,Stokes WOM07,Women's WC Qualifier,Left-handed,Right-arm fast
+456,Chahal WOM08,Women's WC Qualifier,Right-handed,Off spin
+457,Shami WOM09,Women's WC Qualifier,Right-handed,Right-arm fast
+458,Maharaj WOM10,Women's WC Qualifier,Right-handed,Right-arm medium
+459,Curran WOM11,Women's WC Qualifier,Right-handed,Right-arm fast
+460,Williams WOM12,Women's WC Qualifier,Right-handed,Leg spin
+461,Pant WOM13,Women's WC Qualifier,Right-handed,Left-arm fast
+462,Ervine WOM14,Women's WC Qualifier,Right-handed,
+463,Kishan WOM15,Women's WC Qualifier,Right-handed,Left-arm fast
+464,Buttler WOM16,Women's WC Qualifier,Right-handed,Leg spin
+465,Boult WOM01,Women's World Cup Warm-up,Right-handed,Right-arm fast
+466,Chahal WOM02,Women's World Cup Warm-up,Right-handed,Right-arm medium
+467,Smith WOM03,Women's World Cup Warm-up,Left-handed,
+468,Williamson WOM04,Women's World Cup Warm-up,Left-handed,Right-arm fast
+469,Sharma WOM05,Women's World Cup Warm-up,Left-handed,Right-arm fast
+470,Archer WOM06,Women's World Cup Warm-up,Left-handed,Leg spin
+471,Stokes WOM07,Women's World Cup Warm-up,Right-handed,Left-arm orthodox
+472,Carey WOM08,Women's World Cup Warm-up,Left-handed,Leg spin
+473,Iyer WOM09,Women's World Cup Warm-up,Right-handed,Left-arm orthodox
+474,Agar WOM10,Women's World Cup Warm-up,Right-handed,Leg spin
+475,Labuschagne WOM11,Women's World Cup Warm-up,Left-handed,Left-arm orthodox
+476,Jadeja WOM12,Women's World Cup Warm-up,Right-handed,Right-arm fast
+477,Marsh WOM13,Women's World Cup Warm-up,Left-handed,Left-arm orthodox
+478,Kuldeep WOM14,Women's World Cup Warm-up,Right-handed,Left-arm orthodox
+479,Nabi WOM15,Women's World Cup Warm-up,Left-handed,Right-arm fast
+480,Root WOM16,Women's World Cup Warm-up,Left-handed,Leg spin
+481,Buttler ZIM01,Zimbabwe,Right-handed,Right-arm medium
+482,Southee ZIM02,Zimbabwe,Left-handed,Left-arm orthodox
+483,Kishan ZIM03,Zimbabwe,Left-handed,Left-arm orthodox
+484,Agar ZIM04,Zimbabwe,Left-handed,Right-arm fast
+485,Rashid ZIM05,Zimbabwe,Right-handed,
+486,Jadeja ZIM06,Zimbabwe,Right-handed,Left-arm orthodox
+487,Carey ZIM07,Zimbabwe,Right-handed,Left-arm orthodox
+488,Maharaj ZIM08,Zimbabwe,Left-handed,Left-arm orthodox
+489,Gayle ZIM09,Zimbabwe,Right-handed,Left-arm fast
+490,Finch ZIM10,Zimbabwe,Left-handed,Off spin
+491,Boult ZIM11,Zimbabwe,Left-handed,Right-arm medium
+492,Kuldeep ZIM12,Zimbabwe,Left-handed,Right-arm fast
+493,Root ZIM13,Zimbabwe,Right-handed,Right-arm fast
+494,Finch ZIM14,Zimbabwe,Right-handed,Off spin
+495,Taylor ZIM15,Zimbabwe,Left-handed,
+496,Archer ZIM16,Zimbabwe,Right-handed,Leg spin
+497,Malan ZIM01,Zimbabwe Women,Left-handed,Off spin
+498,Stokes ZIM02,Zimbabwe Women,Left-handed,Left-arm fast
+499,Chahal ZIM03,Zimbabwe Women,Left-handed,
+500,Masakadza ZIM04,Zimbabwe Women,Right-handed,Left-arm fast
+501,Kishan ZIM05,Zimbabwe Women,Left-handed,Left-arm fast
+502,Bairstow ZIM06,Zimbabwe Women,Right-handed,Right-arm medium
+503,Chahal ZIM07,Zimbabwe Women,Left-handed,Right-arm medium
+504,Bairstow ZIM08,Zimbabwe Women,Left-handed,
+505,Malan ZIM09,Zimbabwe Women,Left-handed,Right-arm fast
+506,Williams ZIM10,Zimbabwe Women,Left-handed,Leg spin
+507,Ashwin ZIM11,Zimbabwe Women,Left-handed,
+508,Malan ZIM12,Zimbabwe Women,Right-handed,Leg spin
+509,Chahal ZIM13,Zimbabwe Women,Left-handed,Right-arm fast
+510,Sharma ZIM14,Zimbabwe Women,Left-handed,Off spin
+511,Williams ZIM15,Zimbabwe Women,Left-handed,Left-arm fast
+512,Ngidi ZIM16,Zimbabwe Women,Right-handed,Right-arm medium
