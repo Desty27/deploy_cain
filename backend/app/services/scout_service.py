@@ -121,7 +121,7 @@ def _local_equal_opportunity_diff(df: pd.DataFrame, group: str, decision: str, l
     return float(max(tprs) - min(tprs)) if tprs else 0.0
 
 
-def _local_rank_candidates(df: pd.DataFrame, protected: str = "region", shortlist_k: int = 10) -> Dict[str, Any]:
+def _local_rank_candidates(df: pd.DataFrame, protected: str = "region", shortlist_k: int = 10) -> tuple[pd.DataFrame, Dict[str, Any]]:
     df = _local_score_candidates(df)
     df = _local_within_group_standardize(df, protected, "raw_score", "std_score")
     df = _local_monotonic_calibration(df, "std_score", "final_score")
@@ -138,7 +138,54 @@ def _local_rank_candidates(df: pd.DataFrame, protected: str = "region", shortlis
         "cutoff": float(cutoff),
         "baseline_cutoff": float(baseline_cutoff),
     }
-    return {"ranked": ranked.to_dict("records"), "audits": audits}
+    return ranked, audits
+
+
+def _build_response(
+    input_df: pd.DataFrame,
+    ranked_df: pd.DataFrame,
+    audits: Dict[str, Any],
+    protected: str,
+    shortlist_k: int,
+) -> Dict[str, Any]:
+    input_preview = input_df.head(20).to_dict("records")
+
+    fairness_heatmap = []
+    heatmap_df = pd.DataFrame(audits.get("group_stats", []))
+    if not heatmap_df.empty and protected in heatmap_df.columns:
+        shortlist_rates = (
+            ranked_df.groupby(protected)["shortlisted"].mean().reset_index(name="shortlist_rate")
+            if protected in ranked_df.columns and "shortlisted" in ranked_df.columns
+            else pd.DataFrame(columns=[protected, "shortlist_rate"])
+        )
+        fairness_heatmap = (
+            heatmap_df.merge(shortlist_rates, on=protected, how="left")
+            .rename(columns={"mean": "avg_final_score"})
+            .fillna({"shortlist_rate": 0.0})
+            .to_dict(orient="records")
+        )
+
+    top_shortlist = ranked_df[ranked_df.get("shortlisted", 0) == 1] if "shortlisted" in ranked_df.columns else ranked_df
+    top_roles: Dict[str, Any] = {}
+    if "role" in ranked_df.columns:
+        for role in sorted(ranked_df["role"].dropna().astype(str).unique()):
+            top_roles[role] = top_shortlist[top_shortlist["role"] == role].head(5).to_dict("records")
+
+    top_groups: Dict[str, Any] = {}
+    if protected in ranked_df.columns:
+        for group_val in sorted(ranked_df[protected].dropna().astype(str).unique()):
+            top_groups[group_val] = top_shortlist[top_shortlist[protected] == group_val].head(5).to_dict("records")
+
+    return {
+        "ranked": ranked_df.to_dict("records"),
+        "audits": audits,
+        "input_preview": input_preview,
+        "fairness_heatmap": fairness_heatmap,
+        "top_roles": top_roles,
+        "top_groups": top_groups,
+        "protected": protected,
+        "shortlist_k": shortlist_k,
+    }
 
 
 class ScoutUnavailable(RuntimeError):
@@ -185,11 +232,15 @@ def rank_candidates(
     protected: str = "region",
     shortlist_k: int = 10,
 ) -> Dict[str, Any]:
+    input_df = df.copy()
     if score_candidates is not None and mitigate_and_rank is not None:
         scored = score_candidates(df)  # type: ignore[misc]
-        ranked, audits = mitigate_and_rank(scored, protected=protected, shortlist_k=shortlist_k)  # type: ignore[misc]
-        return {"ranked": ranked.to_dict("records"), "audits": audits}
-    return _local_rank_candidates(df=df, protected=protected, shortlist_k=shortlist_k)
+        ranked_df, audits = mitigate_and_rank(scored, protected=protected, shortlist_k=shortlist_k)  # type: ignore[misc]
+        ranked_df = ranked_df if isinstance(ranked_df, pd.DataFrame) else pd.DataFrame(ranked_df)
+        return _build_response(input_df, ranked_df, audits, protected, shortlist_k)
+
+    ranked_df, audits = _local_rank_candidates(df=input_df, protected=protected, shortlist_k=shortlist_k)
+    return _build_response(input_df, ranked_df, audits, protected, shortlist_k)
 
 
 def rank_from_payload(payload: Dict[str, Any], protected: str, shortlist_k: int) -> Dict[str, Any]:

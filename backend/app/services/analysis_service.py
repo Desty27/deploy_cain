@@ -64,6 +64,109 @@ def compute_over_summary(df: pd.DataFrame) -> pd.DataFrame:
     return grouped
 
 
+def _prediction_accuracy(
+    monte_stats: Dict[str, Any],
+    match_deliveries: pd.DataFrame,
+) -> Dict[str, Any]:
+    """Compute prediction correctness by comparing simulated winner vs actual runs by innings."""
+    try:
+        win1 = float(monte_stats.get("win_prob_innings1", 0) or 0.0)
+        win2 = float(monte_stats.get("win_prob_innings2", 0) or 0.0)
+        tie_p = float(monte_stats.get("tie_prob", 0) or 0.0)
+    except Exception:
+        win1 = win2 = tie_p = 0.0
+
+    if win1 > win2:
+        predicted_innings = 1
+        predicted_label = f"Innings 1 (confidence {win1:.0%})"
+        confidence = win1
+    elif win2 > win1:
+        predicted_innings = 2
+        predicted_label = f"Innings 2 (confidence {win2:.0%})"
+        confidence = win2
+    else:
+        predicted_innings = 0
+        predicted_label = f"Tie (confidence {tie_p:.0%})"
+        confidence = tie_p
+
+    runs_by_innings = match_deliveries.groupby("innings")["runs_total"].sum()
+    runs1 = int(runs_by_innings.get(1, 0))
+    runs2 = int(runs_by_innings.get(2, 0))
+    if runs1 == runs2:
+        actual_innings = 0
+        actual_label = "Tie"
+    elif runs1 > runs2:
+        actual_innings = 1
+        actual_label = "Innings 1"
+    else:
+        actual_innings = 2
+        actual_label = "Innings 2"
+
+    status = "Unknown"
+    if predicted_innings == 0 and actual_innings == 0:
+        status = "Tie predicted"
+    elif predicted_innings == actual_innings and predicted_innings in (1, 2):
+        status = "Correct"
+    elif predicted_innings in (1, 2) and actual_innings in (1, 2):
+        status = "Incorrect"
+
+    return {
+        "predicted": predicted_label,
+        "actual": actual_label,
+        "status": status,
+        "confidence": confidence,
+        "runs_innings1": runs1,
+        "runs_innings2": runs2,
+    }
+
+
+def _tactical_recommendations(
+    teams: List[str],
+    phase_team: Dict[str, Any],
+    wicket_clusters: List[Dict[str, object]],
+    bowler_clusters: List[Dict[str, object]],
+    over_summary: pd.DataFrame,
+    monte_stats: Dict[str, Any],
+) -> List[str]:
+    """Lightweight textual recommendations inspired by the Streamlit view."""
+    notes: List[str] = []
+    if teams:
+        notes.append(
+            f"Supervisor: Align {teams[0]} vs {teams[1]} plans using the metrics below."
+        )
+    for team, phases in (phase_team or {}).items():
+        for phase_name, stats in phases.items():
+            rpo = stats.get("rpo") if isinstance(stats, dict) else None
+            balls = stats.get("balls") if isinstance(stats, dict) else None
+            if rpo is not None:
+                notes.append(f"{team} {phase_name}: Run rate {rpo:.2f} over {balls or 0} balls — protect momentum or accelerate.")
+
+    if wicket_clusters:
+        cluster = wicket_clusters[0]
+        notes.append(
+            f"Tactical: Target wicket surge in innings {cluster['innings']} (overs {cluster['start_over']}-{cluster['end_over']})."
+        )
+    if bowler_clusters:
+        bow = bowler_clusters[0]
+        notes.append(
+            f"Supervisor: Assign {bow.get('bowler_name', 'bowler')} around overs {bow['start_over']}-{bow['end_over']} (innings {bow['innings']})."
+        )
+    if not over_summary.empty:
+        death_slump = over_summary[(over_summary["over"] >= 16) & (over_summary["runs"] < 6)]
+        if not death_slump.empty:
+            ov = int(death_slump.iloc[0]["over"])
+            notes.append(f"Death overs lull at over {ov}: inject boundary options or rotate strike better.")
+    if monte_stats and monte_stats.get("trials", 0):
+        win1 = monte_stats.get("win_prob_innings1", 0)
+        win2 = monte_stats.get("win_prob_innings2", 0)
+        notes.append(
+            f"Simulation: Win probability batting first {win1:.0%} vs chasing {win2:.0%}; choose toss strategy accordingly."
+        )
+    if not notes:
+        notes.append("No tactical signals detected — add more deliveries to analyze.")
+    return notes
+
+
 def compute_wicket_clusters_sliding(df: pd.DataFrame, window: int = 6, top_n: int = 5) -> pd.DataFrame:
     """Sliding-window wicket clusters derived from ball-by-ball data."""
     if df.empty or "wicket" not in df.columns:
@@ -209,6 +312,17 @@ def analyze_match(match_id: int, innings_filter: Optional[List[int]] = None, mon
     over_summary = compute_over_summary(match_deliveries)
     enriched_balls = enrich_ball_by_ball(match_deliveries, players_map)
 
+    avg_run_rate = float(innings_summary["run_rate"].mean()) if not innings_summary.empty else 0.0
+    prediction = _prediction_accuracy(monte_stats or {}, match_deliveries)
+    recommendations = _tactical_recommendations(
+        teams=context["info"].get("teams", []),
+        phase_team=phase_team,
+        wicket_clusters=wicket_clusters,
+        bowler_clusters=bowler_clusters,
+        over_summary=over_summary,
+        monte_stats=monte_stats or {},
+    )
+
     overview = {
         "match": {
             "match_id": match_id,
@@ -227,6 +341,12 @@ def analyze_match(match_id: int, innings_filter: Optional[List[int]] = None, mon
         "innings_summary": innings_summary.to_dict("records"),
         "over_summary": over_summary.to_dict("records"),
         "ball_by_ball": enriched_balls.head(400).to_dict("records"),
+        "summary": {
+            "winner": match_row.get("winner"),
+            "avg_run_rate": avg_run_rate,
+            "prediction_accuracy": prediction,
+        },
+        "recommendations": recommendations,
     }
     return overview
 

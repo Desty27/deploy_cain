@@ -26,29 +26,41 @@ except Exception:  # pragma: no cover - optional dependency
     generate_coach_guidance = None  # type: ignore
 
 
-def _local_load_wellness_data(path: Path = Path("global_scout/data/wellness_demo.csv")) -> pd.DataFrame:
+def _local_load_wellness_data(path: Path = Path("global_scout/data/wellness_demo.csv"), size: int = 14) -> pd.DataFrame:
     if path.exists():
         return pd.read_csv(path)
-    data = {
-        "player_id": ["D001", "D002"],
-        "name": ["Demo Bowler", "Demo Batter"],
-        "team": ["Australia", "England"],
-        "role": ["bowler", "batter"],
-        "acute_load": [280, 180],
-        "chronic_load": [210, 190],
-        "acute_chronic_ratio": [1.33, 0.95],
-        "wellness_score": [7.4, 8.5],
-        "soreness": [4, 2],
-        "sleep_hours": [7.0, 8.2],
-        "injury_history": [1, 0],
-        "recovery_index": [0.78, 0.86],
-        "days_since_last_match": [3, 2],
-        "travel_hours": [6, 4],
-        "bowling_overs_last_7d": [24, 0],
-        "batting_balls_last_7d": [0, 164],
-        "sprint_sessions_last_7d": [5, 7],
-    }
-    return pd.DataFrame(data)
+
+    rng = np.random.default_rng(seed=42)
+    teams = ["Australia", "England", "India", "New Zealand"]
+    roles = ["bowler", "batter", "allrounder", "keeper"]
+
+    rows = []
+    for idx in range(size):
+        role = rng.choice(roles)
+        acute = float(rng.integers(120, 340))
+        chronic = float(rng.integers(110, 260))
+        ratio = round(acute / max(chronic, 1), 2)
+        row = {
+            "player_id": f"D{idx+1:03d}",
+            "name": f"Demo Player {idx+1}",
+            "team": rng.choice(teams),
+            "role": role,
+            "acute_load": acute,
+            "chronic_load": chronic,
+            "acute_chronic_ratio": ratio,
+            "wellness_score": round(float(rng.uniform(6.2, 9.4)), 2),
+            "soreness": int(rng.integers(1, 8)),
+            "sleep_hours": round(float(rng.uniform(5.5, 8.8)), 1),
+            "injury_history": int(rng.integers(0, 3)),
+            "recovery_index": round(float(rng.uniform(0.65, 0.93)), 2),
+            "days_since_last_match": int(rng.integers(1, 6)),
+            "travel_hours": round(float(rng.uniform(0, 12)), 1),
+            "bowling_overs_last_7d": int(rng.integers(0, 30)) if "bowl" in role else 0,
+            "batting_balls_last_7d": int(rng.integers(40, 220)) if "bat" in role or "keeper" in role else 0,
+            "sprint_sessions_last_7d": int(rng.integers(2, 9)),
+        }
+        rows.append(row)
+    return pd.DataFrame(rows)
 
 
 def _local_clip(values, low: float = 0.0, high: float = 1.0, index: Optional[pd.Index] = None) -> pd.Series:
@@ -203,9 +215,11 @@ def _ensure_available() -> None:
         return
 
 
-def load_dataset() -> pd.DataFrame:
+def load_dataset(use_demo: bool = False) -> pd.DataFrame:
     _ensure_available()
-    if load_wellness_data is not None:
+    if use_demo:
+        df = _local_load_wellness_data()
+    elif load_wellness_data is not None:
         df = load_wellness_data()  # type: ignore[misc]
     else:
         df = _local_load_wellness_data()
@@ -218,9 +232,47 @@ def risk_summary(df: pd.DataFrame) -> Dict[str, Any]:
     _ensure_available()
     risk_df = compute_injury_risk(df) if compute_injury_risk is not None else _local_compute_injury_risk(df)  # type: ignore[misc]
     summary = summarize_risk(risk_df) if summarize_risk is not None else _local_summarize_risk(risk_df)  # type: ignore[misc]
+    # Top slices
+    high_risk = risk_df[risk_df["risk_level"] == "High"].sort_values("risk_score", ascending=False)
+    moderate_risk = risk_df[risk_df["risk_level"] == "Moderate"].sort_values("risk_score", ascending=False)
+
+    # Readiness snapshot (core fields)
+    readiness_cols = [
+        "player_id",
+        "name",
+        "team",
+        "role",
+        "risk_score",
+        "readiness",
+        "risk_level",
+        "primary_driver",
+        "recommendation",
+    ]
+    readiness_snapshot = risk_df[[c for c in readiness_cols if c in risk_df.columns]].copy()
+
+    # Training load summary if columns exist
+    training_cols = [
+        "name",
+        "team",
+        "acute_load",
+        "chronic_load",
+        "bowling_overs_last_7d",
+        "batting_balls_last_7d",
+        "sprint_sessions_last_7d",
+    ]
+    training_summary = risk_df[[c for c in training_cols if c in risk_df.columns]].copy()
+
+    # Coordinated action plan (guidance notes)
+    guidance_notes = _local_generate_coach_guidance(risk_df, match_row=None)
+
     return {
         "risk_table": risk_df.to_dict("records"),
         "summary": summary,
+        "high_risk_players": high_risk.to_dict("records"),
+        "moderate_risk_players": moderate_risk.to_dict("records"),
+        "readiness_snapshot": readiness_snapshot.to_dict("records"),
+        "training_summary": training_summary.to_dict("records"),
+        "guidance": guidance_notes,
     }
 
 
